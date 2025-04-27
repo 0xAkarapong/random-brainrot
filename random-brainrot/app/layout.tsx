@@ -26,6 +26,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content="Italian, animal, prompt, generator, random, Itarian Brainrot, brainrot, meme" />
+        <meta property="og:title" content="Itarian Brainrot Generator" />
+        <meta property="og:description" content="Generate random Italian animal prompts" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://random-brainrot.vercel.app/" />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1200354900670165"
