@@ -40,5 +40,5 @@ jobs:
           project: "random-italian-brainrot"
           entrypoint: "jsr:@deno/nextjs-start"
           root: "."
-          include: .next, public
+          
           
