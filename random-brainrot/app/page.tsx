@@ -32,7 +32,7 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center font-sans bg-gray-100">
-      <h1 className="text-4xl font-bold mb-4 text-center text-black">Random Brainrot Italian Animal Prompt</h1>
+      <h1 className="text-4xl font-bold mb-4 text-center text-black">Random Italian Brainrot Animal Prompt</h1>
       <div className="bg-white px-8 py-10 rounded-2xl shadow-lg text-center mb-8 min-w-[350px] w-full max-w-md">
         {error && <p className="text-red-600 mb-4">{error}</p>}
         {result ? (
