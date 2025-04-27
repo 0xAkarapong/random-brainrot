@@ -106,25 +106,27 @@ export default function HomePage() {
   }, []);
 
   return (
-    <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', fontFamily: 'sans-serif', background: '#f7f7f7' }}>
-      <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Random Brainrot Italian Animal Prompt</h1>
-      <div style={{ background: 'white', padding: '2rem 3rem', borderRadius: '1rem', boxShadow: '0 2px 16px #0001', textAlign: 'center', marginBottom: '2rem', minWidth: 350 }}>
-        {error && <p style={{ color: 'red', marginBottom: '1rem' }}>{error}</p>}
+    <main className="min-h-screen flex flex-col items-center justify-center font-sans bg-gray-100">
+      <h1 className="text-4xl font-bold mb-4 text-center text-black">Random Brainrot Italian Animal Prompt</h1>
+      <div className="bg-white px-8 py-10 rounded-2xl shadow-lg text-center mb-8 min-w-[350px] w-full max-w-md">
+        {error && <p className="text-red-600 mb-4">{error}</p>}
         {result ? (
           <>
-            <h2 style={{ color: '#c0392b', fontSize: '2rem', marginBottom: '0.5rem' }}>{result.name}</h2>
-            <p style={{ fontSize: '1.25rem', color: '#333', marginBottom: '1.5rem' }}>{result.prompt}</p>
+            <h2 className="text-2xl font-semibold text-red-700 mb-2">{result.name}</h2>
+            <p className="text-lg text-gray-700 mb-6">{result.prompt}</p>
           </>
         ) : loading ? (
           <p>Loading...</p>
         ) : null}
-        <button onClick={fetchPrompt} style={{ padding: '0.75rem 2rem', fontSize: '1.1rem', borderRadius: '0.5rem', border: 'none', background: '#27ae60', color: 'white', cursor: 'pointer', fontWeight: 'bold' }} disabled={loading}>
+        <button
+          onClick={fetchPrompt}
+          className="px-6 py-3 text-lg rounded-lg font-bold bg-green-600 hover:bg-green-700 text-white transition disabled:opacity-60 disabled:cursor-not-allowed"
+          disabled={loading}
+        >
           {loading ? 'Generating...' : 'Generate Another'}
         </button>
       </div>
-      <footer style={{ color: '#888', fontSize: '0.9rem' }}>
-        Made with 🧠 by your imagination
-      </footer>
+      <footer className="text-gray-400 text-sm">Made with 🧠 by your imagination</footer>
     </main>
   );
 }
