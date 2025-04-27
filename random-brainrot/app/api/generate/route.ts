@@ -6,7 +6,29 @@ export async function POST() {
       return new Response(JSON.stringify({ error: 'Missing Gemini API key' }), { status: 500 });
     }
 
-    const userPrompt = `Generate a highly imaginative and comical prompt for an AI image generator, featuring a Brainrot animal (either a real creature warped into something strange or a completely invented fantastical beast). The prompt must detail an utterly surreal and unexpected activity or situation the animal is engaged in, incorporating bizarre elements and a touch of chaotic energy. Give this creature a name in the classic Italian animal naming style: " [Descriptive Adjective] [Animal Noun]". The adjective should be as outlandish as the animal itself. Return the result as a JSON object with the keys 'name' and 'prompt'. Example: { "name": "Il Cosmico Formichiere", "prompt": "A cosmic anteater wearing a tiny opera helmet dramatically conducting a symphony of exploding spaghetti in a field of giant rubber ducks." }`;
+    const userPrompt = `
+The term "brainrot animal" refers to a specific internet meme trend (popular on TikTok since early 2024) featuring AI-generated absurd hybrid creatures. These creations are defined by:
+- Hybrid Creatures: Animals fused with everyday objects, food, weapons or fantastical elements (e.g., a shark in sneakers: Tralalero Tralalá; half-banana/half-monkey: Chimpanzini Bananini; crocodile‑jet: Bombardiro Crocodilo).
+- Italianized Names: Deliberately Italian‑sounding, often silly or unpronounceable.
+- Surreal Visuals: Chaotic, hyper‑saturated colors, neon explosions, glitchy/unpolished AI aesthetic.
+- Distorted Italian Audio: Often paired with warped Italian opera or TTS voiceovers.
+- Humor Through Illogic: Randomness and absurdity to evoke the feeling of the "brain roasting."
+
+Prompt Instructions:
+Generate a highly imaginative, comical AI image prompt featuring one such brainrot animal. The creature must be a surreal AI‑generated hybrid with an Italianized name only. Describe an utterly bizarre activity or scene, emphasizing chaotic visuals and absurd humor. Return a JSON object with:
+- name: the Italian name (e.g., "Tralalero Tralalá")
+- prompt: the image description
+
+Example:
+{
+  "name": "Bombardiro Crocodilo",
+  "prompt": "A surreal image of a vintage World War II bomber airplane with the front half transformed into the head of a giant, ferocious crocodile. The crocodile's head is highly detailed, with sharp teeth, scaly skin, and menacing eyes. The plane is flying through a bright blue sky with fluffy white clouds. A bomb is suspended beneath the plane."
+},
+{
+  "name": "Tralalero Tralalá",
+  "prompt": "The image is of a shark with legs wearing blue Nike sneakers, standing on a beach."
+}
+`;
 
     const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=' + apiKey, {
       method: 'POST',
