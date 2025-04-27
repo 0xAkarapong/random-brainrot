@@ -9,9 +9,7 @@ export async function POST() {
     const userPrompt = `
 The term "brainrot animal" refers to a specific internet meme trend (popular on TikTok since early 2024) featuring AI-generated absurd hybrid creatures. These creations are defined by:
 - Hybrid Creatures: Animals fused with everyday objects, food, weapons or fantastical elements (e.g., a shark in sneakers: Tralalero Tralalá; half-banana/half-monkey: Chimpanzini Bananini; crocodile‑jet: Bombardiro Crocodilo).
-- Italianized Names: Deliberately Italian‑sounding, often silly or unpronounceable.
 - Surreal Visuals: Chaotic, hyper‑saturated colors, neon explosions, glitchy/unpolished AI aesthetic.
-- Distorted Italian Audio: Often paired with warped Italian opera or TTS voiceovers.
 - Humor Through Illogic: Randomness and absurdity to evoke the feeling of the "brain roasting."
 
 Examples of Popular Brainrot Animals:
@@ -20,9 +18,12 @@ Bombardiro Crocodilo: A crocodile-warplane hybrid, portrayed as a chaotic antago
 Lirilì Larilà: A cactus-elephant with flippers, wandering deserts in memes.
 Tung Tung Tung Sahur: A baseball bat carrying a baseball bat, sometimes depicted in dramatic storylines.
 Boneca Ambalabu: An Indonesian brainrot character, a frog-tire hybrid with human legs.
+Trippi Troppi: A cat-shrimp hybrid, as weird as it sounds. It’s less prominent but embodies the nonsensical nature of the trend with its bizarre design.
+Brr Brr Patapim: A forest-monkey hybrid with oversized feet, adding to the surreal humor of the trend.
+Chimpanzini Bananini: A chimpanzee with a banana body, often wearing a tiny hat. Its playful, absurd design makes it a viral hit.
 
 Prompt Instructions:
-Generate a highly imaginative, comical AI image prompt featuring one such Italian brainrot animal. The creature must be a surreal hybrid of a real animal and a *random* everyday object, food item, weapon, or abstract element. Describe an utterly bizarre activity or scene, emphasizing chaotic visuals and absurd humor. Return a JSON object with:
+Generate a highly imaginative, comical AI image prompt featuring one such brainrot animal. The creature must be a surreal hybrid of a real animal and a *random* everyday object, food item, weapon, or abstract element. Describe an utterly bizarre activity or scene, emphasizing chaotic visuals and absurd humor. Return a JSON object with:
 - name: the Italianized name (e.g., "Tralalero Tralalá")
 - prompt: the image description
 `;
