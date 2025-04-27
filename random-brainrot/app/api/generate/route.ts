@@ -6,7 +6,7 @@ export async function POST() {
       return new Response(JSON.stringify({ error: 'Missing Gemini API key' }), { status: 500 });
     }
 
-    const userPrompt = `Generate a random, creative, and funny prompt for an AI image generator. The prompt should describe a brainrot Italian animal (real or imaginary), including a surreal or absurd action, and give it a name in the style of Italian animal names (e.g., "Il [Adjective] [Animal]"). Return a JSON object with 'name' and 'prompt' fields. Example: { "name": "Il Radioattivo Cinghiale", "prompt": "Radioactive wild boar dancing in the Colosseum" }`;
+    const userPrompt = `Generate a random, creative, and funny prompt for an AI image generator. The prompt should describe a Brainrot animal (real or imaginary), including a surreal or absurd action, and give it a name in the style of Italian animal names (e.g., "Il [Adjective] [Animal]"). Return a JSON object with 'name' and 'prompt' fields. Example: { "name": "Il Radioattivo Cinghiale", "prompt": "Radioactive wild boar dancing in the Colosseum" }`;
 
     const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=' + apiKey, {
       method: 'POST',
