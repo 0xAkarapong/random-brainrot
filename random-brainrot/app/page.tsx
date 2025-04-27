@@ -66,20 +66,6 @@ const brainrotActions = [
   'hiding in a wine barrel',
 ];
 
-function getRandom<T>(arr: T[]): T {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
-
-function generatePrompt() {
-  const animal = getRandom(italianAnimals);
-  const adj = getRandom(brainrotAdjectives);
-  const action = getRandom(brainrotActions);
-  // Italian-style name: e.g. Il [Adjective] [Animal]
-  const name = `Il ${adj.charAt(0).toUpperCase() + adj.slice(1)} ${animal}`;
-  const prompt = `${adj.charAt(0).toUpperCase() + adj.slice(1)} ${animal.toLowerCase()} ${action}`;
-  return { name, prompt };
-}
-
 export default function HomePage() {
   const [result, setResult] = useState<{ name: string; prompt: string } | null>(null);
   const [loading, setLoading] = useState(false);
