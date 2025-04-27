@@ -39,6 +39,6 @@ jobs:
         with:
           project: "random-italian-brainrot"
           entrypoint: "jsr:@deno/nextjs-start"
-          root: "/random-brainrot/"
-          
+          root: "."
+          include: .next, public
           
