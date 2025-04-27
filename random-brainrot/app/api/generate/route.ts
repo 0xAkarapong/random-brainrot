@@ -22,7 +22,7 @@ Brr Brr Patapim: A forest-monkey hybrid with oversized feet, adding to the surre
 Chimpanzini Bananini: A chimpanzee with a banana body, often wearing a tiny hat. Its playful, absurd design makes it a viral hit.
 
 Prompt Instructions:
-Generate a highly imaginative, comical AI image prompt featuring one such brainrot animal. The creature must be a surreal hybrid of a real animal and a *random* everyday object, food item, weapon, or abstract element. Describe an utterly bizarre activity or scene, emphasizing wild visuals and absurd humor. Return a JSON object with:
+Generate a highly imaginative, comical AI image prompt featuring one such brainrot animal. The creature must be a surreal hybrid of a real animal and a *random* everyday object, food item, weapon, or abstract element. You may include a background environment, but the animal must be the clear focus of the description. Emphasize wild visuals and absurd humor. Return a JSON object with:
 - name: the Italianized name (e.g., "Tralalero Tralalá")
 - prompt: the image description
 `;
