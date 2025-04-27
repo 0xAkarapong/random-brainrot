@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Italian Brainrot Generator",
-  description: "Generate random Italian animal prompts",
+  description: "Unleash chaos with the Italian Brainrot Generator! Create hilarious and bizarre AI prompts featuring random Italian animals in surreal situations. Perfect for sparking creativity or just having a laugh.",
 };
 
 export default function RootLayout({
