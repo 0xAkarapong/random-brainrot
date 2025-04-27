@@ -1,71 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 
-// Example Italian animal names and styles
-const italianAnimals = [
-  'Cinghiale', // wild boar
-  'Riccio',    // hedgehog
-  'Gabbiano',  // seagull
-  'Capra',     // goat
-  'Lupo',      // wolf
-  'Tasso',     // badger
-  'Cervo',     // deer
-  'Volpe',     // fox
-  'Fagiano',   // pheasant
-  'Istrice',   // porcupine
-  'Gatto',     // cat
-  'Cane',      // dog
-  'Asino',     // donkey
-  'Mucca',     // cow
-  'Pecora',    // sheep
-  'Gallina',   // chicken
-  'Oca',       // goose
-  'Tacchino',  // turkey
-  'Coniglio',  // rabbit
-  'Topo',      // mouse
-];
-
-const brainrotAdjectives = [
-  'cybernetic',
-  'radioactive',
-  'spaghetti-fueled',
-  'pizza-mancer',
-  'opera-singing',
-  'espresso-powered',
-  'gondola-riding',
-  'mafia boss',
-  'fashionista',
-  'soccer hooligan',
-  'Vespa-driving',
-  'meme overlord',
-  'ancient Roman',
-  'gelato-obsessed',
-  'bizarre',
-  'surreal',
-  'avant-garde',
-  'hyperactive',
-  'noodle-armed',
-  'mysterious',
-];
-
-const brainrotActions = [
-  'dancing in the Colosseum',
-  'arguing with pigeons',
-  'stealing cannoli',
-  'singing to the moon',
-  'riding a Vespa through Venice',
-  'throwing pizza slices',
-  'posing for Renaissance painters',
-  'leading a pasta revolution',
-  'building a tower of gelato',
-  'escaping from a Roman gladiator',
-  'hosting a cooking show',
-  'playing chess with a cardinal',
-  'painting graffiti on ruins',
-  'summoning a rain of olives',
-  'hiding in a wine barrel',
-];
-
 export default function HomePage() {
   const [result, setResult] = useState<{ name: string; prompt: string } | null>(null);
   const [loading, setLoading] = useState(false);
@@ -79,8 +14,12 @@ export default function HomePage() {
       const data = await res.json();
       if (data.error) throw new Error(data.error);
       setResult({ name: data.name, prompt: data.prompt });
-    } catch (e: any) {
-      setError(e.message || 'Failed to fetch prompt');
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        setError(e.message || 'Failed to fetch prompt');
+      } else {
+        setError('Failed to fetch prompt');
+      }
     } finally {
       setLoading(false);
     }
