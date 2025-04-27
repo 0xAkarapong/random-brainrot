@@ -29,10 +29,10 @@ jobs:
           node-version: lts/*
 
       - name: Install step
-        run: "npm install"
+        run: "deno install"
 
       - name: Build step
-        run: "npm run build --turbopack"
+        run: "deno run build --turbopack"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
@@ -40,5 +40,5 @@ jobs:
           project: "random-italian-brainrot"
           entrypoint: "jsr:@deno/nextjs-start"
           root: "my-app"
-          include: .next, public
+          
           
