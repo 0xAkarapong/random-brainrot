@@ -1,4 +1,4 @@
-export async function POST(_: Request) {
+export async function POST() {
   try {
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
